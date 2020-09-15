@@ -7,7 +7,10 @@
     "test": "jest --verbose --runInBand --testLocationInResults",
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
-    "start:watch": "nodemon server.js"
+    "start:watch": "nodemon server.js",
+    "seed": "node seed.js",
+    "drop": "mongo dark --eval 'db.dropDatabase()'",
+    "db-load-all": "npm run drop && npm run seed"
   },
   "author": "",
   "license": "ISC",
